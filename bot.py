@@ -22,11 +22,6 @@ async def on_command_error(ctx, error):
     if isinstance(error, commands.CommandNotFound):
         await ctx.send('That command does not exist.')
 
-#when a user types s.ping reply with 'pong'
-@client.command(aliases=['Ping', 'Ping!'])
-async def ping(ctx):
-    await ctx.send('Pong!')
-
 
 #******Bag of holding commands******
 #give command
@@ -54,5 +49,5 @@ async def Empty(ctx):
     
 
 #allow the code to run on discord 
-client.run('NjU2MjAwODk0NzM1NzEyMjU2.XvD_oQ.44suXVw2SquE3t3H1cgYhvvs3qQ')
+client.run('')
 
