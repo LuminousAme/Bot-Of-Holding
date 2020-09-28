@@ -38,17 +38,19 @@ async def on_command_error(ctx, error):
     if isinstance(error, commands.CommandNotFound):
         await ctx.send('That command does not exist.')
 
-#generic function for accessing database
-def open_database(**kwargs):
-    conn = sqlite3.connect('boh.db')
-    cursor = conn.cursor()
-
-    #If inserting into inventory
-    #If removing from inventory
-    
-    #Save changes then close the database    
+#commands for dealing with database
+#open and close database (close_db should always be called after open_db)
+def open_db():
+    conn = sqlite3.connect('inv.db')
+    cursor = conn.cursor()  
+def close_db():
     conn.commit()
     conn.close()
+
+#list inventory given userid
+def list_inv(userid)
+    open_db()
+    return conn.execute("SELECT * FROM Items WHERE UserID = '{}'".format(userid))
 
 #******Bag of holding commands******
 #give command
