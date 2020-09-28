@@ -1,0 +1,7 @@
+schema for main database file
+
+CREATE TABLE Items (
+user_id INTEGER NOT NULL,
+item_name TEXT NOT NULL,
+count INTEGER NOT NULL
+);

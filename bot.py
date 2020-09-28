@@ -47,10 +47,10 @@ def close_db():
     conn.commit()
     conn.close()
 
-#list inventory given userid
+#list inventory given user id
 def list_inv(userid)
     open_db()
-    return conn.execute("SELECT * FROM Items WHERE UserID = '{}'".format(userid))
+    return conn.execute("SELECT * FROM Items WHERE user_id = '{}'".format(userid))
 
 #******Bag of holding commands******
 #give command
